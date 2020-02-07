@@ -11,17 +11,11 @@ namespace GC_Lab_4._3
         public PrimeNumbers()
         {
             knownPrimes = new List<int>();
-            for (int i = 2; i < 10; i++)
-            {
-                if (IsNumberPrime(i))
-                {
-                    knownPrimes.Add(i);
-                }
-            }
+            knownPrimes.Add(2);
         }
 
 
-        public int GetNPrime(int num)
+        public int GetPrime(int num)
         {
             int index = num - 1;
             while (knownPrimes.Count <= index)

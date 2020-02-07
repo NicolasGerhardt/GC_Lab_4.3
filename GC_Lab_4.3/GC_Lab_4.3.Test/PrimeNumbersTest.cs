@@ -13,7 +13,7 @@ namespace GC_Lab_4._3.Test
             var expected = 2;
 
             //-- Act
-            int actual = primeNumbers.GetNPrime(1);
+            int actual = primeNumbers.GetPrime(1);
 
             //-- Assert
             Assert.AreEqual(expected, actual);
@@ -28,7 +28,22 @@ namespace GC_Lab_4._3.Test
             var expected = 29;
 
             //-- Act
-            int actual = primeNumbers.GetNPrime(10);
+            int actual = primeNumbers.GetPrime(10);
+
+            //-- Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [TestMethod]
+        public void Get100thPrimeNumber()
+        {
+            //-- Arrange
+            var primeNumbers = new PrimeNumbers();
+            var expected = 541;
+
+            //-- Act
+            int actual = primeNumbers.GetPrime(100);
 
             //-- Assert
             Assert.AreEqual(expected, actual);
